@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2p422lofgu35"]
+
+[ext_resource type="Script" path="res://Resources/AudioSourceScript.gd" id="2_rkb5i"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kwjuv"]
+
+[sub_resource type="EventAsset" id="EventAsset_tervl"]
+is_3d = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/MindGames"
+guid = "{63075ddf-2b97-4739-a87b-424013d0aa71}"
+name = "MindGames"
+
+[node name="Node3D" type="Node3D"]
+
+[node name="AudioSource" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_kwjuv")
+script = ExtResource("2_rkb5i")
+event = SubResource("EventAsset_tervl")

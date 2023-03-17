@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://chkal1oukmr2a"]
+
+[ext_resource type="Script" path="res://Resources/camera.gd" id="1_eqhaj"]
+
+[node name="CameraFixed" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+script = ExtResource("1_eqhaj")
+
+[node name="StudioListener3D" type="StudioListener3D" parent="." node_paths=PackedStringArray("attenuation_object")]
+attenuation_object = NodePath("..")
+transform = Transform3D(1, 0, -8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
